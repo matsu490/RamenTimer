@@ -11,7 +11,6 @@ import sys
 import PySide.QtGui
 import PySide.QtCore
 import PySide.QtUiTools
-import MainDialog
 import time
 
 
