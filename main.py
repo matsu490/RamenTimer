@@ -32,6 +32,10 @@ class MainForm(PySide.QtGui.QDialog):
             self.count -= 1
             self.updateLCD()
 
+    def updateLCD(self):
+        self.ui.LCDTimer.display(self.count)
+        self.ui.LCDTimer.update()
+
 if __name__ == '__main__':
     app = PySide.QtGui.QApplication(sys.argv)
 
