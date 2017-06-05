@@ -25,6 +25,7 @@ class MainForm(PySide.QtGui.QDialog):
         self.timer = PySide.QtCore.QTimer()
         self.timer.setInterval(10)
         self.timer.timeout.connect(self.countdown)
+        self.ui.LCDTimer.display(self.count)
 
     def countdown(self):
         if self.count > 0:
