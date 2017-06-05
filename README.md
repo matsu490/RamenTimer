@@ -14,6 +14,13 @@ RamenTimer
 ## アプリの起動  
 `$ python main.py`
 
+## Start/Stop ボタン
+カウントダウンを開始します。
+今のところストップはできません。
+
+## Reset ボタン
+今のところ何もできません。
+
 # Install
 以下のコマンドで任意のディレクトリに clone してください。  
 `$ git clone git@github.com:matsu490/RamenTimer.git`  
