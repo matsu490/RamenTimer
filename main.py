@@ -45,8 +45,13 @@ class MainForm(PySide.QtGui.QDialog):
             self.timer.start()
             self.is_run = True
 
+    def pushResetButton(self):
+        self.initTimer()
+        self.updateLCD()
+
     def establishConnection(self):
         self.ui.StartStopButton.clicked.connect(self.pushStartStopButton)
+        self.ui.ResetButton.clicked.connect(self.pushResetButton)
 
 if __name__ == '__main__':
     app = PySide.QtGui.QApplication(sys.argv)
