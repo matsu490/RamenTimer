@@ -17,6 +17,7 @@ class MainForm(PySide.QtGui.QDialog):
     def __init__(self, parent=None):
         super(MainForm, self).__init__(parent)
         self.ui = PySide.QtUiTools.QUiLoader().load('./MainDialog.ui')
+        self.establishConnection()
         self.initUI()
 
     def initUI(self):
@@ -43,6 +44,9 @@ class MainForm(PySide.QtGui.QDialog):
         else:
             self.timer.start()
             self.is_run = True
+
+    def establishConnection(self):
+        self.ui.StartStopButton.clicked.connect(self.pushStartStopButton)
 
 if __name__ == '__main__':
     app = PySide.QtGui.QApplication(sys.argv)
