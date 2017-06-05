@@ -36,6 +36,14 @@ class MainForm(PySide.QtGui.QDialog):
         self.ui.LCDTimer.display(self.count)
         self.ui.LCDTimer.update()
 
+    def pushStartStopButton(self):
+        if self.is_run:
+            self.timer.stop()
+            self.is_run = False
+        else:
+            self.timer.start()
+            self.is_run = True
+
 if __name__ == '__main__':
     app = PySide.QtGui.QApplication(sys.argv)
 
